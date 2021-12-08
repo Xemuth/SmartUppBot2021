@@ -1,0 +1,27 @@
+{
+	"_comment": "Functions is an array of each function definig is allowed roles / users. each roles/users can be writted in Str or ID",
+	"_comment": "the config file must be at the same place of the bot and must be named like the bot exe but with .cfg",
+	"_comment": "ID is prevalent over the rest, if users/roles can't be resolved when guild is loaded then it will be deleted and wont be saved",
+	"_comment": "if no ID is present, users will try to be resolved then ID will be added",
+	
+	"functions":[
+		{
+			"name": "uptime",
+			"roles":[
+				{
+					"name": "Depardieu",
+					"ID": "1982388472832"
+				},
+				{
+					"name": "Owner"
+				}
+			],
+			"users":[
+				{
+					"name": "Xemuth",
+					"ID": "8432887432429"
+				}
+			]
+		},
+	]
+}

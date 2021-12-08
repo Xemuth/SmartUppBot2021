@@ -1,0 +1,17 @@
+description "\377255,42,0";
+
+uses
+	Core,
+	Core/SSL;
+
+file
+	SmartUppBot.h,
+	SmartUppBot.cpp,
+	SmartUppBotFunction.cpp,
+	SmartUppBotCommand.cpp,
+	ModuleInfo.h,
+	DiscordServerArchitecture.h,
+	CommonCodes.h,
+	AllEmoji.h,
+	ExempleConfigFile.json;
+
