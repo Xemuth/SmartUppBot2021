@@ -40,8 +40,6 @@ namespace Upp{
 		Event<ValueMap&, Command&> event;
 	};
 	
-	
-	
 	enum class DispatchLog {NO_FUNCTION = 0, NOT_ALLOWED = 1, DONE = 2};
 	class Module{
 		public:
@@ -135,13 +133,13 @@ namespace Upp{
 			Time GetConnectedTime()const{return uptime;}
 			const Guild& GetGuild()const{return guild;}
 		
-			template <class T>
-			bool CreateModule(){
+			template <class T, class... Args>
+			bool CreateModule(Args&&... args){
 				for(Module& m : modules){
 					if(typeid(m) == typeid(T))
 						return false;
 				}
-				T& mod = modules.Create<T>(*this);
+				T& mod = modules.Create<T>(*this, std::forward<Args>(args)...);
 				LOG(AsString(GetSysTime()) + " | Module " + mod.GetName() +" have been created !");
 				return true;
 			}

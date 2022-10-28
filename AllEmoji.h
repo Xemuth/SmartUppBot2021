@@ -2,7 +2,7 @@
 #define _SmartUppBot2021_AllEmoji_h_
 
 namespace Upp{
-	//list of all twetemoji 
+	//list of all twetemoji
 	const VectorMap<String,String> emojis{
 		{":grinning:","%F0%9F%98%80"},
 		{":smiley:","%F0%9F%98%83"},
